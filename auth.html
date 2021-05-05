@@ -12,17 +12,18 @@
       <div class="into">
         <h1>Log in</h1>
       </div>
-    <form action="">
-      <div><input class="email" type="email" placeholder="enter your email"></div>
-      <div><input class="pass" type="password" placeholder=""></div>
+    <form action="" method="POST" name="email" onsubmit=" return validated()">
+      <div><input class="email" type="email" placeholder="enter your email" name="email"></div>
+      <div id="email_error">Please fill your email</div>
+      <div><input class="pass" type="password" name="password" placeholder=""></div>
+      <div id="pass_error">Please fill your password</div>
       <div><input class="log" type="submit" value="login"></div>
       <input type="checkbox" name="me" value="password">
       <label for="password"> Remember Me</label>
       <div class ="fp"><a class= "link" href="">Forgot password?</a></div><div class="">Don't have an account? <a class="link" href="signup.html"> Sign up</a></div>
     </div>
     </form>
-
   </div>
-  
+  <script src="valid.js"></script>
 </body>
 </html>
