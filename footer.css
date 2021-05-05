@@ -1,0 +1,17 @@
+.one{
+    background-color: #E1701A;
+    justify-content: center;
+    text-align: center;
+}
+#two{
+    padding: 60px 0;
+}
+.social{
+    display: flex;
+    justify-content: center;
+    padding-top: 30px;
+}
+.facebook,.twitter,.IG,.print{
+    height: 20px;
+    width: 20px;
+}
