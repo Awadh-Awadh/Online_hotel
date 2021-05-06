@@ -1,0 +1,56 @@
+.form{
+  text-align: center;
+  padding: 10%;
+  background-image: url(./photos/lily-banse--YHSwy6uqvk-unsplash.jpg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-size: cover;
+  
+}
+.container{
+margin: auto;
+width: 50%;
+background-color:white;
+opacity: 0.8;
+border-radius: 10px;
+
+}
+.email,.pass{
+  padding: 3% 12% 3% 0.5%;
+  border-radius: 20px;
+  background-color: white;
+  outline: none;
+  border-color: #e1701a;
+}
+.pass{
+  margin-top: 10%;
+}
+.log{
+  padding: 2% 6%;
+  border-radius: 10px;
+  background-color: #e1701a;
+  margin: 40px;
+  cursor: pointer;
+  outline: none;
+}
+.fp{
+  padding: 30px;
+}
+.link{
+  color: black;
+  text-decoration: none;
+}
+.container #email_error,
+.container #pass_error{
+  margin-top: 5px;
+  font-size: 18px;
+  color: #c62828;
+  background: rgba(255,0,0,0.1);
+  width: 50%;
+  margin: auto;
+  text-align: center;
+  padding: 5px 0;
+  border-radius: 3px;
+  border: 1px solid #EF9A9A;
+  display: none;
+}
