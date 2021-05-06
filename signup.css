@@ -1,0 +1,35 @@
+
+.form{
+  text-align: center;
+  padding: 10%;
+  background-image: url(./photos/log\ in.jpg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-size: cover;
+  
+}
+.container{
+margin: auto;
+width: 50%;
+background-color:white;
+opacity: 0.8;
+border-radius: 10px;
+
+}
+.name1,.name2,.email,.pass{
+  padding: 3% 12% 3% 0.5%;
+  border-radius: 20px;
+  background-color: white;
+  outline: none;
+  margin:5%;
+  border-color: #e1701a;
+}
+
+.log{
+  padding: 2% 6%;
+  border-radius: 10px;
+  background-color: #e1701a;
+  margin: 5%;
+  cursor: pointer;
+  outline: none;
+}
