@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="home.css">
+    <script src='inc/jq.js'></script>
+    <script src='inc/jqui.js'></script>
+    <link rel='stylesheet' href='inc/jq-ui.css'>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <nav>
+        <div class="logo"><img src="images/logo.jpg" alt="log" height="150px" width="150px" 
+            style="object-fit: cover;"></div> <div class="headerholder">FOODY</div>
+            <div class="searcharea"><table><tr><td><div class="btn" onclick="getContact()">Contacts</div></td></tr>
+                <tr><td><form id="Searchform" onsubmit="sub()">
+                    <input type="text" name="item" id="item" placeholder="Search" autocomplete="on">
+                </form></td></tr></table></div>
+    </nav>
+</head>
+<body>
+    <div class="body">
+        <div class="menuholder">
+            <h2>MENU</h2>
+            <div class="menucont" onclick="getData('breakfast')">Breakfast</div>
+            <div class="menucont" onclick="getData('lunch')">Lunch</div>
+            <div class="menucont" onclick="getData('dinner')">Dinner</div>
+            <div class="menucont" onclick="getData('dessert')">Desert</div>
+            <div class="menucont" onclick="getData('wines')">Wines</div>
+            <div class="menucont" onclick="getData('juice')">Juices</div>
+            <div class="menucont" onclick="logOut()">Logout</div>
+        </div>
+        <div class="bodyholder" id="body">
+        </div>
+
+        
+    </div>
+</body>
+</html>
+<script>
+    $(document).ready(function(){$(".bodyholder").load("get.php?breakfast");});
+    function getData(data){
+$(".bodyholder").load("get.php?"+data);
+    }
+    function logOut(){
+        location.replace("login.html");
+    }
+    function getContact(){
+        location.assign("footer.html");
+    }
+</script>
