@@ -1,28 +1,53 @@
-<!DOCTYPE html>
 <html lang="en">
 <head>
+<script src='inc/jq.js'></script>
+<script src='inc/jqui.js'></script>
+<link rel='stylesheet' href='inc/jq-ui.css'>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="auth.css">
-  <title>Document</title>
-    <section id="login">
-     <div class ="form">
-    <div class="container">
-      <div class="into">
-        <h1>Log in</h1>
-      </div>
-    <form action="home.html">
-      <div><input type="email" name="email" class="email"  placeholder="enter your email" ></div>
-      <div id="email_error">Please fill your email</div>
-      <div><input class="pass" type="password" name="password"></div>
-      <div id="pass_error">Please fill your password</div>
-      <div><input class="log" type="submit" value="login"></div>
-      <input type="checkbox" name="me" value="password">
-      <label for="password"> Remember Me</label>
-      <div class ="fp"><a class= "link" href="">Forgot password?</a></div><div class="">Don't have an account? <a class="link" href="signup.html"> Sign up</a></div>
-    </div>
-    </form>
-  </div>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <link rel="stylesheet" href="signup.css">
+  <title>Index</title>
+</head>
+<body>
+  <section id="login">
+    <div class ="form">
+   <div class="container">
+     <div class="into">
+       <h1>Register Now</h1>
+     </div>
+     <p class="message" id="message"></p>
+   <form method="post" onsubmit="signupData(event)" id="lform">
+     <div><input class="name1" type="text" placeholder="Enter username" name="fname" id="fname" required autofocus></div>
+     <div><input class="name2" type="text" placeholder="Phone Number" name="phone" id="phone" required></div>
+     <div><input class="email" type="email" placeholder="enter your email" name="email" id="email" required></div>
+     <div><input class="email" type="password" placeholder="Enter password" name="pass" id="pass"required></div>
+     <!-- <div><input type="checkbox" name="me" value="password" name="="pass" required>
+     <label for="password"> I accept the Terms of Use & Privacy Policy</label></div>-->
+     <div><button class="log" >Register Now</button> </div>
+     </form>
+    
+   </div>
+   </div>
 </body>
 </html>
+<script>
+function _(el){
+  return document.getElementById(el);
+}
+  function signupData(e){
+    e.preventDefault();
+    var dat=$("#signupdata").serialize();
+    $.ajax({
+          method:"post",url:"get.php",data:dat,
+          beforeSend:function(){$(".message").html("Sending data...");},
+          complete:function(){$(".message").html('');}
+        }).fail(function(xhr,status,error){alert(error);
+      }).done(function(res){
+        _("lform").reset();
+        if(res.trim()=="ok"){
+          location.replace("home.html");
+        }else{alert(res.trim());}
+      });   
+  }
+</script>
