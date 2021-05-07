@@ -2,7 +2,9 @@
 <html lang="en">
 <head>
     <link rel="stylesheet" href="home.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src='inc/jq.js'></script>
+    <script src='inc/jqui.js'></script>
+    <link rel='stylesheet' href='inc/jq-ui.css'>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,7 +12,7 @@
     <nav>
         <div class="logo"><img src="images/logo.jpg" alt="log" height="150px" width="150px" 
             style="object-fit: cover;"></div> <div class="headerholder">FOODY</div>
-            <div class="searcharea"><table><tr><td>Contacts</td></tr>
+            <div class="searcharea"><table><tr><td><div class="btn" onclick="getContact()">Contacts</div></td></tr>
                 <tr><td><form id="Searchform" onsubmit="sub()">
                     <input type="text" name="item" id="item" placeholder="Search" autocomplete="on">
                 </form></td></tr></table></div>
@@ -41,7 +43,9 @@
 $(".bodyholder").load("get.php?"+data);
     }
     function logOut(){
-        location.replace("login.html");
+        location.replace("index.html");
     }
-    
+    function getContact(){
+        location.assign("footer.html");
+    }
 </script>
