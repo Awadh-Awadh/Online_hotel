@@ -1,0 +1,68 @@
+#footer{
+    background-color: #E1701A;
+    
+}
+.text{
+    padding: 20px 0 60px 0;
+    text-align: center;
+    letter-spacing: 4px;
+}
+.social{
+    display: flex;
+    justify-content: center;
+    padding-top: 30px;
+}
+.facebook,.twitter,.IG,.print{
+    height: 20px;
+    width: 20px;
+}
+.contact{
+    display: flex;
+    justify-content: space-around;
+
+}
+.socials{
+    display: block;
+}
+.fab{
+    color: blue;
+}
+.message{
+
+background-color:white;
+opacity: 0.8;
+border-radius: 10px;
+margin: auto;
+width: 40%;
+}
+.message div{
+    margin:40px;
+}
+.form1,.form2{
+padding: 3% 12% 3% 0.5%;
+border-radius: 20px;
+background-color: white;
+outline: none;
+margin:5%;
+border-color:#e1701a;
+}
+.form3{
+    border-color: #e1701a;
+    margin: 5%;
+}
+.form1:hover,.form2:hover,.form3:hover{
+    border-color: black;
+}
+.submit{
+    margin-left: 25%;
+    padding: 2% 15%;
+    border-radius: 10px;
+    background-color: #e1701a;
+    cursor: pointer;
+    outline: none;
+    border: none;
+}
+ 
+.socials > div{
+    margin :60px 2px;
+}

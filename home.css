@@ -1,0 +1,46 @@
+body{height:100%;width:99%;}
+@media screen and (min-width:1000px){
+    nav{
+            height:180px;width:100%;background: #e1701a;padding-top:20px;
+        }
+    .body{
+        min-height:77%;width:99%;background:#f0f0f0;position: absolute;
+    }
+    .menuholder{
+        height:100%;width:10%;min-width:80px;background: #e1701a;position: absolute;
+    }
+    .bodyholder{
+        position: absolute;background:#f0f0f0;width:90%;left:10%;height:100%;
+        flex-direction: row;display: flex;justify-content: space-around;
+        flex-wrap: wrap;overflow:auto;}
+    .menucont{height:40px;cursor: pointer;width:80px;padding-left:20px;}
+    .logo{height: 130px;width:130px;border-radius: 50%;border: 1px solid red;margin-left: 20px;
+            float:left}
+    .headerholder{float:left;width: 100px;height:100px;font-family: 'Times New Roman';
+            font-size:32px;line-height: 100px;font-weight: bold; margin-left: 30px;}
+    .searcharea{
+        height:200px;float: right;max-width:500px;min-width:200px
+    }
+    .searcharea table{
+        height:100%;width:100%;font-weight: bold;
+    }
+    .searcharea td{
+            width:100%;height: 100px;
+        }
+    .searcharea input[type="text"]{height:30px;width:80%;font-family:rockwell;font-size:24px;
+            border-radius:25px;outline: none;padding-left:10px;
+        }
+    .itemholder{height:42%;width:30%;background:#ccc;border:1px solid #ccc;margin-top:10px;
+        cursor: pointer;justify-content: space-around;border-top-left-radius: 25px;border-top-right-radius: 25px;}
+        .item{
+            height:80%;width:100%;padding:10px
+        }
+    .itemimage{height:100%;width:60%;background: white;float: left;}
+    .iteminfo{height:95%;width:30%;float:left;text-align: center;display: flex;justify-content: space-between;
+        align-items: center;flex-direction: column;}
+        .btn{height:40px;width:100%;text-align: center;font-weight: bold;background: #e1701a;
+            border-radius:25px;line-height:40px;margin-left:10px;}
+
+
+   
+}

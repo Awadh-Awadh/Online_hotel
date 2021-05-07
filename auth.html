@@ -6,16 +6,24 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="auth.css">
   <title>Document</title>
-  <div class ="form">
-    <form action="">
-      <div><input type="email" placeholder="enter your email"></div>
-      <div><input type="password"></div>
-      <div><input type="submit" value="login"></div>
+    <section id="login">
+     <div class ="form">
+    <div class="container">
+      <div class="into">
+        <h1>Log in</h1>
+      </div>
+    <form action="home.html" method="POST" name="email" onsubmit=" return validated()">
+      <div><input type="email" name="email" class="email"  placeholder="enter your email" ></div>
+      <div id="email_error">Please fill your email</div>
+      <div><input class="pass" type="password" name="password"></div>
+      <div id="pass_error">Please fill your password</div>
+      <div><input class="log" type="submit" value="login"></div>
+      <input type="checkbox" name="me" value="password">
+      <label for="password"> Remember Me</label>
+      <div class ="fp"><a class= "link" href="">Forgot password?</a></div><div class="">Don't have an account? <a class="link" href="signup.html"> Sign up</a></div>
+    </div>
     </form>
-
   </div>
-</head>
-<body>
-  
+  <script src="valid.js"></script>
 </body>
 </html>
